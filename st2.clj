@@ -45,7 +45,7 @@
 ;;   (or look some up if you don't remember any!).
         
 ; 1
-(defn days-year[days]
+(defn secs-year[days]
   (* (* 1M (* 24 60 60)
      days)))
         
