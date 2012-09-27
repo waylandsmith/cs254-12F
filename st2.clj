@@ -1,6 +1,8 @@
-(ns st2)
+(ns st2
+;  (require [clojure.java.io :as io]) ; got this from http://www.beaconhill.com/blog/?p=283
+  )
 
-; for show and tell Thursday 9/20
+; for show and tell Thursday 9/27
 
 (import '(javax.swing JFrame JLabel JTextField JButton) ; got this from a wikibook
         '(java.awt.event ActionListener) ; link: http://en.wikibooks.org/wiki/Clojure_Programming/Examples/Temperature_Converter_GUI
@@ -34,7 +36,7 @@
     (.setSize 200 150) ; adapted with different sizes
     (.setVisible true))) ; from the wikibook
 
-; we've currently got an awesome app that lets you input text, press a button, and display a bunch of Java error messages!
+ ; we've currently got an awesome app that lets you input text, press a button, and display a bunch of Java error messages!
 
 
 ;; Problem Set 1: 
@@ -49,19 +51,30 @@
   (* (* 1M (* 24 60 60)
      days)))
         
+(defn pie-chart[diameter]
+  ; problem set 1.2 - calculates an area for a given diameter cirlce
+  ( * Math/PI (Math/pow (/ diameter 2) 2)))
+
+(defn phys-force [mass, ac]
+  ; F = ma
+  (* mass ac))   
+
+(defn phys-energy [mass]
+  ; you know the one
+  (* mass (Math/pow 299792458 2)))
+
+(defn alchemy [mass, effic]
+  ; if you could turn matter into energy....
+  (* (phys-energy mass) effic))
+        
+; maybe later we can try and have fun with our physics functions
+        
 (defn die[sides]
   ; an arbitrary die rolling function
   (inc (rand-int sides)))
         
         
-        
-        
-        
-        
-        
-        
-        
-        
+; try and make a function that will find combinations of numbers that add up to a total without using the same numbers
         
         
         
