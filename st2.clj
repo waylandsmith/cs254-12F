@@ -38,15 +38,6 @@
 
  ; we've currently got an awesome app that lets you input text, press a button, and display a bunch of Java error messages!
 
-
-;; Problem Set 1: 
-;; - Write an expression that calculates the number of seconds in a year.
-;; - Define diameter to be some number and write expression that calculates the area
-;;   of a circle with that diameter.
-;; - Write arithmetic expressions for other formulas that you remember from high school
-;;   (or look some up if you don't remember any!).
-        
-; 1
 (defn secs-year[days]
   (* (* 1M (* 24 60 60)
      days)))
@@ -69,9 +60,7 @@
         
 ; maybe later we can try and have fun with our physics functions
         
-(defn die[sides]
-  ; an arbitrary die rolling function
-  (inc (rand-int sides)))
+
         
         
 ; try and make a function that will find combinations of numbers that add up to a total without using the same numbers
