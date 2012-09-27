@@ -1,12 +1,10 @@
-(ns st2
-;  (require [clojure.java.io :as io]) ; got this from http://www.beaconhill.com/blog/?p=283
-  )
+(ns st2)
 
 ; for show and tell Thursday 9/27
 
-(import '(javax.swing JFrame JLabel JTextField JButton) ; got this from a wikibook
+(import '(javax.swing JFrame JLabel JTextField JButton) ; got this from a wikibook link below
         '(java.awt.event ActionListener) ; link: http://en.wikibooks.org/wiki/Clojure_Programming/Examples/Temperature_Converter_GUI
-        '(java.awt GridLayout)
+        '(java.awt GridLayout))
         
 (let [wbox (new JFrame "Graphical Test")
       msg (new JLabel "Hello World")]
@@ -59,8 +57,6 @@
   (* (phys-energy mass) effic))
         
 ; maybe later we can try and have fun with our physics functions
-        
-
         
         
 ; try and make a function that will find combinations of numbers that add up to a total without using the same numbers
