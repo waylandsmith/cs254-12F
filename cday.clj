@@ -47,7 +47,8 @@
 
 (defn rig [cls]
   ; a d20 random individual generator
-  (let [hp {:adept 6 :commoner 4 :cleric 8 :bard 6 :barbarian 12 :druid 8 :monk 8 :fighter 10 :paladin 10 :ranger 8 :rogue 6 :sorcerer 4 :wizard 4 :psion 4 :psywar 8 :wilder 6 :soulknife 10}])
+  (def hp {:adept 6 :commoner 4 :cleric 8 :bard 6 :barbarian 12 :druid 8 :monk 8 :fighter 10 :paladin 10 :ranger 8 :rogue 6 :sorcerer 4 :wizard 4 :psion 4 :psywar 8 :wilder 6 :soulknife 10})
+  ; had trouble getting let to work - I know def is evil
   (let [abils {:stre nil :dex nil :con nil :inte nil :wis nil :cha nil}])
   (statgen "strength") ; these won't matter until I get the damn function returning a value somewhere
   (statgen "dexterity")
