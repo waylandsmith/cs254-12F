@@ -56,5 +56,7 @@
   (statgen "intelligence")
   (statgen "wisdom")
   (statgen "charisma")
-  (println "Health = " (inc(rand-int((hp :cls)))))
+  (println "Health = " (inc(rand-int(get cls hp))))
   )
+
+; look
