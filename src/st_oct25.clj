@@ -1,4 +1,3 @@
-(ns st-oct25)
 
 ; we are making a random level 1 D&D human individual
 
@@ -35,3 +34,22 @@
     (+ (ab-bonus (get abils :con)) (inc(rand-int(get hp cls))))
     )
   )
+
+
+(def classy {:adept {:hp 6 :bab 1} 
+             :commoner {:hp 4 :bab 1} 
+             :cleric {:hp 8 :bab 2}
+             :bard {:hp 6 :bab 2}
+             :barbarian {:hp 12 :bab 3}
+             :druid {:hp 8 :bab 2} 
+             :monk {:hp 8 :bab 2}
+             :fighter {:hp 10 :bab 3}
+             :paladin {:hp 10 :bab 3}
+             :ranger {:hp 8 :bab 1}
+             :rogue {:hp 6 :bab 2}
+             :sorcerer {:hp 4 :bab 1}
+             :wizard {:hp 4 :bab 1}
+             :psion {:hp 4 :bab 1}
+             :psywar {:hp 8 :bab 2}
+             :wilder {:hp 6 :bab 2}
+             :soulknife {:hp 10 :bab 2}})
