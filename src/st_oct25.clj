@@ -1,3 +1,4 @@
+(ns st-oct25)
 
 ; we are making a random level 1 D&D human individual
 
@@ -25,11 +26,15 @@
         (< score 9) (* (with-precision 1 :rounding HALF_UP (/ (- 10M score) 2)) -1)
         ))
 
+
 (defn rig [cls]
   ; a d20 random individual generator
   (let [abils {:stre (d18) :dex (d18) :con (d18)
                :inte (d18) :wis (d18) :cha (d18)}]
     (println abils) ; these won't matter until I get the damn function returning a value somewhere
+    (println "Str +" (ab-bonus (get abils :stre)) "Dex +" (ab-bonus (get abils :dex)) 
+           "Con +" (ab-bonus (get abils :con)) "Int +" (ab-bonus (get abils :inte)) 
+           "Wis +" (ab-bonus (get abils :wis)) "Cha +" (ab-bonus (get abils :cha)))
     (print "Health = " )
     (+ (ab-bonus (get abils :con)) (inc(rand-int(get hp cls))))
     )
@@ -53,3 +58,6 @@
              :psywar {:hp 8 :bab 2}
              :wilder {:hp 6 :bab 2}
              :soulknife {:hp 10 :bab 2}})
+
+; check Programming Clojure page 83 - Select.
+; course on the principles of programming languages
