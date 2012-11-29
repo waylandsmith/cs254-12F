@@ -130,9 +130,15 @@
 
 (defn party-num [party]
   ; turns dem and gop into numbers
-  (cond (identical? party :dem) 1.0
-        (identical? party :gop) -1.0
+  (cond (identical? party :dem) -1.0
+        (identical? party :gop) 1.0
         )
+  )
+
+(defn num-party [num]
+  ; turns numbers into dem and gop
+  (cond (( == -1.0 num) :dem)
+        (( == 1.0 num) :gop))
   )
 
 (defn pparty [year]
@@ -147,10 +153,11 @@
 
 (defn gober [year party]
   ; takes a #### and a float
-  (cond ( == party 1.0 (gober-p year :dem))
-        ( == party -1.0 (gober-p year :gop))        
+  (cond ( == party -1.0 (gober-p year :dem))
+        ( == party 1.0 (gober-p year :gop))        
          )
   )
+
 
 
 ; after function set:  find a fitness case (problem to solve)
