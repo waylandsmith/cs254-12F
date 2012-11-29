@@ -137,8 +137,8 @@
 
 (defn num-party [num]
   ; turns numbers into dem and gop
-  (cond (( == -1.0 num) :dem)
-        (( == 1.0 num) :gop))
+  (cond ( == -1.0 num) :dem
+        ( == 1.0 num) :gop)
   )
 
 (defn pparty [year]
