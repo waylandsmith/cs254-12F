@@ -195,7 +195,7 @@
 ;; We'll the functions and the arities in a map.
 
 (def function-table (zipmap '(+ - * pd)
-                            '(2 2 2 2 )))
+                            '(2 2 2 2)))
 
 (defn random-function 
   []
@@ -222,6 +222,18 @@
   (if (zero? denom)
     0
     (/ num denom)))
+
+
+(defn hp
+  "what party is the House? Returns a half-presidency to the other party"
+  [rep wh]
+  ; figure out which party controls each
+  ; for each potential combination, create an output
+  (cond (== wh 1.0) (cond (== rep wh) -1.0
+                          :else 0)
+        (== wh -1.0) (cond (== rep wh) 1.0
+                           :else 0)
+  ))
 
 ;; We can now evaluate the error of an individual by creating a function
 ;; built around the individual, calling it on all of the x values, and 
