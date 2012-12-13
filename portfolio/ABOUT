@@ -1,0 +1,15 @@
+Matthew Meneghini
+December 2012
+CS-254: Genetic Programming
+Final Porftolio
+
+Contents:
+(> piece | description | filename)
+
+> Final Project Part 1        | Simple evolution on the US House of Representatives         | final_1.clj
+> Final Project Part 2        | 'President Predictor' Based on partisan control of Congress | final_2.clj
+> Final Project Data          | My raw data, original functions, and notes                  | data.clj
+> d20 Individual Generator    | skill-building project                                      | rig.clj
+> Other programs	      | assorted explorations of Clojure, mostly for Show and Tell  | other.clj
+> Archive		      | Archive of these files for easy download           	    | portfolio.tar.gz
+> Self-Eval                   | Self-evaluation                                             | emailed and added on TheHub
